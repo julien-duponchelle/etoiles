@@ -1,16 +1,26 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="/script.js"></script>
+    <meta charset="utf-8">
+    <title>Etoiles</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <input name="repository" value="noplay/python-mysql-replication">
-    <select name="reference">
-    </select>
-    <input type="submit" onclick="onSubmit()">
+<p>
+This page help you to simulate a fundraising for your github project based on popular projects and your Github stats.
+<br />
+<b>Please don't take this seriously.</b>
+</p>
+<div id="form">
+    <div>
+        <input name="repository" value="rails/rails" size="50">
+        compare with
+        <select name="reference"></select>
+        <input type="button" onclick="onSubmit()" value="Compute">
+    </div>
+</div>
 <div id="stats">
 </div>
 </body>

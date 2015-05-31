@@ -11,6 +11,7 @@ $(function() {
     for (var repo_name in repositories) {
         reference.append($("<option>").attr("value", repo_name).text(repositories[repo_name]["name"]));
     }
+    onSubmit();
 });
 
 

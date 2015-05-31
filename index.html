@@ -14,14 +14,12 @@ This page help you to simulate a fundraising for your github project based on po
 <br /><br />
 <b>Please don't take this seriously.</b>
 </p>
-<div id="form">
-    <div>
-        <input name="repository" value="rails/rails" size="50">
-        compare with
-        <select name="reference"></select>
-        <input type="button" onclick="onSubmit()" value="Compute">
-    </div>
-</div>
+<form method="get">
+    <input name="repository" value="rails/rails" size="50">
+    compare with
+    <select name="reference"></select>
+    <input type="submit" value="Compute">
+</form>
 <div id="stats">
 </div>
 <script>

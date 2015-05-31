@@ -1,15 +1,33 @@
 var repositories = {
     "docker/docker": {"raise": 150, "name": "Docker"},
-    "basho/riak": {"raise": 57.5 ,"name": "Riak"},
-    "mongodb/mongo": {"raise": 311.1 ,"name": "MongoDB"},
     "elastic/elasticsearch": {"raise": 104, "name": "Elastic Search"},
-    "PrestaShop/PrestaShop": {"raise": 14.8, "name": "PrestaShop"}
+    "meteor/meteor", {"raise": 31.2, "name": "Meteor"},
+    "mongodb/mongo": {"raise": 311.1 ,"name": "MongoDB"},
+    "PrestaShop/PrestaShop": {"raise": 14.8, "name": "PrestaShop"},
+    "basho/riak": {"raise": 57.5 ,"name": "Riak"},
 };
+
+
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
 
 $(function() {
     var reference = $('select[name="reference"]');
     for (var repo_name in repositories) {
         reference.append($("<option>").attr("value", repo_name).text(repositories[repo_name]["name"]));
+    }
+
+    var repository = getParameterByName("repository")
+    if (repository) {
+        repository = repository.replace(/[\s\/]+$/g, '');
+        $('input[name="repository"]').val(repository);
+    }
+    var reference = getParameterByName("reference");
+    if (reference) {
+        reference = reference.replace(/[\s\/]+$/g, '');
+        $('select[name="reference"]').val(reference);
     }
     onSubmit();
 });

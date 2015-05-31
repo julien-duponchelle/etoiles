@@ -29,7 +29,7 @@ tr:nth-child(odd):hover td {
 
 td {
     background: #FFFFFF;
-    padding: 5px;
+    padding: 10px;
     vertical-align:middle;
 }
 

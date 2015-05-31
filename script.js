@@ -1,6 +1,7 @@
 var repositories = {
     "docker/docker": {"raise": 150, "name": "Docker"},
     "elastic/elasticsearch": {"raise": 104, "name": "Elastic Search"},
+    "ghost/ghost": {"raise": 0.3, "name": "Ghost"},
     "meteor/meteor", {"raise": 31.2, "name": "Meteor"},
     "mongodb/mongo": {"raise": 311.1 ,"name": "MongoDB"},
     "PrestaShop/PrestaShop": {"raise": 14.8, "name": "PrestaShop"},

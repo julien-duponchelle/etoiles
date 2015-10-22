@@ -10,7 +10,8 @@ var repositories = {
     "puppetlabs/puppet": {"raise": 85.5, "name": "Puppet"},
     "basho/riak": {"raise": 57.5 ,"name": "Riak"},
     "saltstack/salt": {"raise": 0.685, "name": "Salt"},
-    "WordPress/WordPress": {"raise": 317.3, "name": "WordPress"}
+    "WordPress/WordPress": {"raise": 317.3, "name": "WordPress"},
+    "npm/npm": {"raise": 10.6, "name": "NPM"}
 };
 
 
